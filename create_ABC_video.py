@@ -59,14 +59,14 @@ LAN 439 Buchstabenmorph V -mdb-2138216.mp4"""
 
 # download videos
 for address in addresses.split('\n'):
-#	subprocess.call(['youtube-dl', address])
+	subprocess.call(['youtube-dl', address])
 	pass
 
 # rename videos
 for item in filenames.split('\n'):
 	letter = item.split('-')[0].replace(' ', '')[-1]
 	# TODO catch filenotfound error
-#	os.rename(item, letter + '.mp4')
+	os.rename(item, letter + '.mp4')
 	print(item)
 
 # Generate list of letters A to Z
